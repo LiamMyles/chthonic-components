@@ -52,8 +52,7 @@ export const button = styled.button`
   color: white;
   &:focus,
   &:hover {
-    background: ${({ theme }): string =>
-      theme.colours.light.background.accentPrimary};
+    background: ${theme.colours.light.background.accentPrimary};
   }
   border-radius: 1rem;
   border-bottom: solid 1px ${theme.colours.light.background.accentSecondary};
