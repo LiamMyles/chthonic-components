@@ -1,0 +1,16 @@
+{
+  "name": "cthhonic-components",
+  "version": "1.0.0",
+  "description": "A place for fun",
+  "main": "index.js",
+  "repository": "git@github.com:LiamMyles/chthonic-components.git",
+  "author": "Liam Myles <liamthemonkey92@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/accordion"
+  ],
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
