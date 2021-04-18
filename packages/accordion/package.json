@@ -1,6 +1,6 @@
 {
   "name": "@chthonic/accordion",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "An accordion",
   "main": "index.tsc",
   "author": "Liam Myles",
@@ -14,5 +14,5 @@
     "styled-components": "^5.2.3",
     "typescript": "^4.2.4"
   },
-  "gitHead": "852492695457e33aa12ec7c4c93dc2075b9801a9"
+  "gitHead": "593f84cd2ebcef7ae2ec73d9895c29ab036ad612"
 }
