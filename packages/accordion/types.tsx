@@ -1,3 +1,4 @@
+import React from 'react'
 export interface Props {
   accordionComponents: Array<{
     title: string
