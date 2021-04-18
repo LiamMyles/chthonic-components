@@ -10,6 +10,5 @@
     "react": "^17.0.2",
     "styled-components": "^5.2.3",
     "typescript": "^4.2.4"
-  },
-  "gitHead": "35d18f2f389a7ea0084d2712328c73aeccad6e0d"
+  }
 }

@@ -6,7 +6,7 @@
   "repository": "git@github.com:LiamMyles/chthonic-components.git",
   "author": "Liam Myles <liamthemonkey92@gmail.com>",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "workspaces": [
     "packages/accordion"
   ],
