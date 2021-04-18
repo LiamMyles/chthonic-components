@@ -1,11 +1,51 @@
-import styled from "styled-components"
+import styled from "styled-components";
+
+const colours = {
+  background: {
+    secondary: "#ddd9e8",
+    primary: "#fcfcff",
+    accentPrimary: "#9C38FF",
+    accentSecondary: "#faf6ff",
+  },
+  text: {
+    link: {
+      display: "#6a00d5", //#005964 "#B200FF" #930077
+      focus: "#930077", //#6a00d5 "#00FFB2"
+      active: "black",
+    },
+    body: "black",
+    heading: "black",
+  },
+};
+
+//  "#ffb200"
+const theme = {
+  colours: {
+    light: {
+      ...colours,
+    },
+    dark: {
+      ...colours,
+      background: {
+        secondary: "#feb67f",
+        primary: "#f7fdff",
+        accentPrimary: "#6a00d5",
+        accentSecondary: "#faf6ff",
+      },
+    },
+  },
+  spacing: {
+    large: "1.5rem",
+    medium: "1rem",
+    small: "0.5rem",
+  },
+};
 
 export const group = styled.div`
   max-width: 100%;
-`
+`;
 export const button = styled.button`
-  background: ${({ theme }): string =>
-    theme.colours.dark.background.accentPrimary};
+  background: ${theme.colours.dark.background.accentPrimary};
   padding: 1rem;
   width: 100%;
   position: relative;
@@ -16,9 +56,8 @@ export const button = styled.button`
       theme.colours.light.background.accentPrimary};
   }
   border-radius: 1rem;
-  border-bottom: solid 1px
-    ${({ theme }): string => theme.colours.light.background.accentSecondary};
-`
+  border-bottom: solid 1px ${theme.colours.light.background.accentSecondary};
+`;
 
 export const icon = styled.span`
   border: solid white;
@@ -29,7 +68,7 @@ export const icon = styled.span`
   position: absolute;
   right: 2em;
   top: 50%;
-  ${button}.animate &{
+  ${button}.animate & {
     transition: transform 0.5s ease-in-out;
   }
   //prettier-ignore
@@ -46,11 +85,10 @@ export const icon = styled.span`
       transform: translateY(-60%) rotate(45deg);
     }
   }
-`
+`;
 export const contentWrapper = styled.div`
-  background: ${({ theme }): string =>
-    theme.colours.light.background.accentSecondary};
+  background: ${theme.colours.light.background.accentSecondary};
   width: 100%;
   padding: 1rem;
   border-radius: 1rem;
-`
+`;
