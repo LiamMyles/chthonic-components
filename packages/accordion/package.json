@@ -1,18 +1,15 @@
 {
   "name": "@chthonic/accordion",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "An accordion",
   "main": "index.tsc",
   "author": "Liam Myles",
   "license": "MIT",
   "private": false,
-  "publishConfig": {
-    "access": "public"
-  },
   "dependencies": {
     "react": "^17.0.2",
     "styled-components": "^5.2.3",
     "typescript": "^4.2.4"
   },
-  "gitHead": "802e0b3c05f28caaf28427d141dd86b28cc19e72"
+  "gitHead": "a5bb2def1effec58304a3beb0e7a77a8d08c906d"
 }
