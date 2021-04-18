@@ -1,6 +1,6 @@
 {
   "name": "@chthonic/accordion",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "An accordion",
   "main": "index.tsc",
   "author": "Liam Myles",
