@@ -2,7 +2,7 @@
   "name": "@chthonic/accordion",
   "version": "0.0.17",
   "description": "An accordion",
-  "main": "index.tsc",
+  "main": "index.tsx",
   "author": "Liam Myles",
   "license": "MIT",
   "private": false,

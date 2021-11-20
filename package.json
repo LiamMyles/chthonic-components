@@ -1,16 +1,26 @@
 {
-  "name": "cthhonic-components",
+  "name": "@chthonic/accordion",
   "version": "1.0.0",
   "description": "A place for fun",
   "main": "index.js",
   "repository": "git@github.com:LiamMyles/chthonic-components.git",
   "author": "Liam Myles <liamthemonkey92@gmail.com>",
   "license": "MIT",
-  "private": false,
+  "private": true,
+  "scripts": {
+    "build-storybooks": "lerna run build-storybook",
+    "predeploy": "yarn build-storybooks",
+    "deploy": "gh-pages -d packages/storybooks/storybook-static"
+  },
   "workspaces": [
-    "packages/accordion"
+    "packages/*"
   ],
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "gh-pages": "^3.2.3",
+    "lerna": "^4.0.0",
+    "react": "17.x",
+    "react-dom": "17.x",
+    "styled-components": "5.x",
+    "typescript": "4.x"
   }
 }
