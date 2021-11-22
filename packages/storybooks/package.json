@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "homepage": "https://liammyles.github.io/chthonic-components",
+  "private": "true",
   "dependencies": {
     "@chthonic/accordion": "0.0.17"
   },
