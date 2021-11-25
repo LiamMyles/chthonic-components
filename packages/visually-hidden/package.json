@@ -25,9 +25,9 @@
     "react": "^16.8.0 || 17.x",
     "react-dom": "^16.8.0 || 17.x"
   },
-  "main": "dist/reach-visually-hidden.cjs.js",
-  "module": "dist/reach-visually-hidden.esm.js",
-  "types": "dist/reach-visually-hidden.cjs.d.ts",
+  "main": "dist/chthonic-visually-hidden-reach-clone.cjs.js",
+  "module": "dist/chthonic-visually-hidden-reach-clone.esm.js",
+  "types": "dist/chthonic-visually-hidden-reach-clone.cjs.d.ts",
   "files": [
     "README.md",
     "dist"

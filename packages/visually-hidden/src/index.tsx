@@ -1,5 +1,5 @@
 /**
- * Welcome to @reach/visually-hidden!
+ * Welcome to @chthonic/visually-hidden-reach-clone!
  *
  * Provides text for screen readers that is visually hidden.
  * It is the logical opposite of the `aria-hidden` attribute.

@@ -1,6 +1,6 @@
 import * as React from "react"
 import { render } from "$test/utils"
-import VisuallyHidden from "@reach/visually-hidden"
+import VisuallyHidden from "@chthonic/visually-hidden-reach-clone"
 
 describe("<VisuallyHidden />", () => {
   describe("rendering", () => {

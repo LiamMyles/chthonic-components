@@ -1,7 +1,7 @@
 import * as React from "react"
 import { render } from "$test/utils"
 import { axe } from "jest-axe"
-import VisuallyHidden from "@reach/visually-hidden"
+import VisuallyHidden from "@chthonic/visually-hidden-reach-clone"
 
 describe("<VisuallyHidden /> with axe", () => {
   it("Should not have ARIA violations", async () => {
