@@ -11,6 +11,7 @@
   "author": "Liam Myles <liamthemonkey92@gmail.com>",
   "homepage": "https://github.com/LiamMyles/chthonic-components#readme",
   "license": "MIT",
+  "private": false,
   "main": "dist/chthonic-use-game-loop.cjs.js",
   "module": "dist/chthonic-use-game-loop.esm.js",
   "types": "dist/chthonic-use-game-loop.cjs.d.ts",
@@ -44,5 +45,6 @@
   },
   "bugs": {
     "url": "https://github.com/LiamMyles/chthonic-components/issues"
-  }
+  },
+  "gitHead": "fddb48559562f2b7f8c7d5eda1d240fa294f8661"
 }
