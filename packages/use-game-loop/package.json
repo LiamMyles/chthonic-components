@@ -1,0 +1,50 @@
+{
+  "name": "@chthonic/use-game-loop",
+  "version": "0.1.0",
+  "description": "React hook that creates a game loop",
+  "keywords": [
+    "react",
+    "hook",
+    "game",
+    "loop"
+  ],
+  "author": "Liam Myles <liamthemonkey92@gmail.com>",
+  "homepage": "https://github.com/LiamMyles/chthonic-components#readme",
+  "license": "MIT",
+  "private": false,
+  "main": "dist/chthonic-use-game-loop.cjs.js",
+  "module": "dist/chthonic-use-game-loop.esm.js",
+  "types": "dist/chthonic-use-game-loop.cjs.d.ts",
+  "devDependencies": {
+    "@types/mock-raf": "^1.0.3",
+    "mock-raf": "^1.0.1",
+    "mockdate": "^3.0.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || 17.x",
+    "react-dom": "^16.8.0 || 17.x"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "README.md",
+    "dist"
+  ],
+  "eslintIgnore": [
+    "node_modules",
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LiamMyles/chthonic-components.git",
+    "directory": "packages/use-game-loop"
+  },
+  "bugs": {
+    "url": "https://github.com/LiamMyles/chthonic-components/issues"
+  },
+  "gitHead": "fddb48559562f2b7f8c7d5eda1d240fa294f8661"
+}

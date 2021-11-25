@@ -1,30 +1,160 @@
 {
   "name": "chthonic-components",
-  "version": "1.0.0",
-  "description": "A place for fun",
-  "main": "index.js",
-  "repository": "git@github.com:LiamMyles/chthonic-components.git",
+  "description": "A place for a chthonic  components and hooks",
+  "private": true,
   "author": "Liam Myles <liamthemonkey92@gmail.com>",
   "license": "MIT",
-  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LiamMyles/chthonic-components.git"
+  },
   "scripts": {
-    "build-storybooks": "lerna run build-storybook",
-    "predeploy": "yarn build-storybooks",
-    "deploy": "gh-pages -d packages/storybooks/storybook-static"
+    "start": "start-storybook -p 9001 -c .storybook --ci",
+    "test:react-16": "USE_REACT_16=true jest",
+    "test": "jest",
+    "build": "yarn build:packages",
+    "build:packages": "preconstruct build",
+    "ver": "lerna version --no-push --exact",
+    "changes": "dotenv lerna-changelog",
+    "clean": "git clean -e '!/.env' -e '!/website-deploy-key' -e '!/website-deploy-key.pub' -fdX .",
+    "lint:packages": "eslint packages",
+    "lint": "yarn lint:packages",
+    "fix": "manypkg fix && preconstruct fix",
+    "dev": "preconstruct dev && yarn start",
+    "pc": "preconstruct",
+    "postinstall": "manypkg check && preconstruct dev",
+    "prepare": "husky install",
+    "release": "lerna publish from-git --yes --pre-dist-tag next"
+  },
+  "dependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "^7.14.5",
+    "@manypkg/cli": "0.18.0",
+    "@preconstruct/cli": "^2.1.0",
+    "@reach/router": "^1.3.4",
+    "@react-spring/web": "^9.2.3",
+    "@storybook/addon-actions": "^6.3.12",
+    "@storybook/addon-docs": "^6.3.12",
+    "@storybook/addon-links": "^6.3.12",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/addons": "^6.3.12",
+    "@storybook/react": "^6.3.12",
+    "@testing-library/dom": "^8.0.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/react-hooks": "^7.0.0",
+    "@testing-library/user-event": "^13.1.9",
+    "@types/eslint": "^7.2.14",
+    "@types/invariant": "^2.2.34",
+    "@types/jest": "^26.0.24",
+    "@types/lodash": "^4.14.171",
+    "@types/node": "^14.x",
+    "@types/react": "^17.0.15",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-is": "^17.0.2",
+    "@types/react-router-dom": "^5.1.8",
+    "@types/react-test-renderer": "^17.0.1",
+    "@types/sinon": "^10.0.2",
+    "@types/styled-components": "^5.1.11",
+    "@types/tabbable": "^3.1.1",
+    "@types/warning": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.28.2",
+    "@typescript-eslint/parser": "^4.28.2",
+    "autoprefixer": "^10.2.6",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^27.0.6",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-annotate-pure-calls": "0.4.0",
+    "babel-plugin-dev-expression": "0.2.2",
+    "babel-plugin-macros": "^3.1.0",
+    "cross-env": "^7.0.3",
+    "dotenv-cli": "^4.0.0",
+    "eslint": "^7.30.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-flowtype": "^5.8.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jest": "^24.3.6",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-testing-library": "^3.9.0",
+    "husky": "^6.0.0",
+    "jest": "^27.0.6",
+    "jest-axe": "^5.0.1",
+    "jest-watch-typeahead": "0.6.4",
+    "lerna": "^4.0.0",
+    "lerna-changelog": "^1.0.1",
+    "lodash": "^4.17.21",
+    "match-sorter": "^6.3.0",
+    "postcss": "^8.3.5",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.3.2",
+    "pretty-quick": "^3.1.1",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-16": "npm:react@^16.14.0",
+    "react-dom": "^17.0.2",
+    "react-dom-16": "npm:react-dom@^16.14.0",
+    "react-is": "^17.0.2",
+    "react-is-16": "npm:react-is@^16.13.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-test-renderer": "^17.0.2",
+    "sinon": "^11.1.1",
+    "styled-components": "^5.3.0",
+    "ts-jest": "^27.0.3",
+    "typescript": "^4.3.5"
+  },
+  "resolutions": {
+    "@types/react": "^17.0.15",
+    "@types/react-dom": "^17.0.9"
   },
   "workspaces": [
-    "packages/*",
-    "storybooks",
-    "accordion"
+    "packages/*"
   ],
-  "devDependencies": {
-    "@preconstruct/cli": "^2.1.5",
-    "gh-pages": "^3.2.3",
-    "lerna": "^4.0.0",
-    "react": "17.x",
-    "react-dom": "17.x",
-    "styled-components": "5.x",
-    "typescript": "4.x"
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ],
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    },
+    "globals": {
+      "__DEV__": "readonly"
+    },
+    "rules": {
+      "import/first": 0,
+      "import/no-anonymous-default-export": 0,
+      "jsx-a11y/no-static-element-interactions": [
+        1,
+        {
+          "handlers": [
+            "onClick",
+            "onMouseDown",
+            "onMouseUp",
+            "onKeyPress",
+            "onKeyDown",
+            "onKeyUp"
+          ]
+        }
+      ]
+    }
+  },
+  "eslintIgnore": [
+    "node_modules",
+    "packages/*/**/dist"
+  ],
+  "prettier": {
+    "endOfLine": "lf",
+    "semi": false,
+    "singleQuote": false,
+    "tabWidth": 2,
+    "trailingComma": "es5"
   },
   "preconstruct": {
     "packages": [
