@@ -1,15 +1,16 @@
 {
-  "name": "@reach/visually-hidden",
+  "name": "@chthonic/visually-hidden-reach-clone",
   "version": "0.16.0",
   "description": "Render text that is announced to screen readers but visually hidden.",
-  "author": "React Training <hello@reacttraining.com>",
+  "author": "Liam Myles <liamthemonkey92@gmail.com>",
   "license": "MIT",
+  "private": "true",
   "sideEffects": [
     "*.css"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/reach/reach-ui.git",
+    "url": "git+https://github.com/LiamMyles/chthonic-components.git",
     "directory": "packages/visually-hidden"
   },
   "dependencies": {

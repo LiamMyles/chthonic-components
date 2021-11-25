@@ -15,9 +15,11 @@
   "module": "dist/chthonic-use-game-loop.esm.js",
   "types": "dist/chthonic-use-game-loop.cjs.d.ts",
   "devDependencies": {
+    "@types/mock-raf": "^1.0.3",
+    "mock-raf": "^1.0.1",
+    "mockdate": "^3.0.5",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "mockdate": "^3.0.5"
+    "react-dom": "^17.0.2"
   },
   "peerDependencies": {
     "react": "^16.8.0 || 17.x",

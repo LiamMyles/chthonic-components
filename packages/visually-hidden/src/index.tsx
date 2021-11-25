@@ -10,10 +10,10 @@
  * @see Source   https://github.com/reach/reach-ui/tree/main/packages/visually-hidden
  */
 
-import * as React from "react";
-import PropTypes from "prop-types";
+import * as React from "react"
+import PropTypes from "prop-types"
 
-import type * as Polymorphic from "@reach/utils/polymorphic";
+import type * as Polymorphic from "@reach/utils/polymorphic"
 
 /**
  * VisuallyHidden
@@ -45,8 +45,8 @@ const VisuallyHidden = React.forwardRef<any, any>(function VisuallyHidden(
       }}
       {...props}
     />
-  );
-}) as Polymorphic.ForwardRefComponent<"span", VisuallyHiddenProps>;
+  )
+}) as Polymorphic.ForwardRefComponent<"span", VisuallyHiddenProps>
 
 /**
  * @see Docs https://reach.tech/visually-hidden#visuallyhidden-props
@@ -55,20 +55,20 @@ interface VisuallyHiddenProps {
   /**
    * @see Docs https://reach.tech/visually-hidden#visuallyhidden-children
    */
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 if (__DEV__) {
-  VisuallyHidden.displayName = "VisuallyHidden";
+  VisuallyHidden.displayName = "VisuallyHidden"
   VisuallyHidden.propTypes = {
     as: PropTypes.any,
     children: PropTypes.node,
-  };
+  }
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 // Exports
 
-export type { VisuallyHiddenProps };
-export { VisuallyHidden };
-export default VisuallyHidden;
+export type { VisuallyHiddenProps }
+export { VisuallyHidden }
+export default VisuallyHidden

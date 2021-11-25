@@ -5258,6 +5258,11 @@
   resolved "https://registry.yarnpkg.com/@types/minimist/-/minimist-1.2.0.tgz#69a23a3ad29caf0097f06eda59b361ee2f0639f6"
   integrity sha1-aaI6OtKcrwCX8G7aWbNh7i8GOfY=
 
+"@types/mock-raf@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@types/mock-raf/-/mock-raf-1.0.3.tgz#c8ab0dd1b07bcac8f1ffcecec1e1dc36b6e62fe6"
+  integrity sha512-Yc7QzBB51d27NCpbtZ4+jfMcsXerQElZgZLubhh0gTv8Ctl9NLWdpQcK+KGLBaIgRLIkMfV+tfSlJ5G2AZMFBg==
+
 "@types/node-fetch@^2.5.7":
   version "2.5.10"
   resolved "https://registry.yarnpkg.com/@types/node-fetch/-/node-fetch-2.5.10.tgz#9b4d4a0425562f9fcea70b12cb3fcdd946ca8132"
@@ -13320,6 +13325,13 @@ mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@^0.5.3:
   dependencies:
     minimist "^1.2.5"
 
+mock-raf@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/mock-raf/-/mock-raf-1.0.1.tgz#7567d23fa1220439853317a8ff0eaad1588e9535"
+  integrity sha512-+25y56bblLzEnv+G4ODsHNck07A5uP5HFfu/1VBKeFrUXoFT9oru+R+jLxLz6rwdM5drUHFdqX9LYBsMP4dz/w==
+  dependencies:
+    object-assign "^3.0.0"
+
 mockdate@^3.0.5:
   version "3.0.5"
   resolved "https://registry.yarnpkg.com/mockdate/-/mockdate-3.0.5.tgz#789be686deb3149e7df2b663d2bc4392bc3284fb"
@@ -13795,6 +13807,11 @@ oauth-sign@~0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/oauth-sign/-/oauth-sign-0.9.0.tgz#47a7b016baa68b5fa0ecf3dee08a85c679ac6455"
   integrity sha512-fexhUFFPTGV8ybAtSIGbV6gOkSv8UtRbDBnAyLQw4QPKkgNlsH2ByPGtMUqdWkos6YCRmAqViwgZrJc/mRDzZQ==
+
+object-assign@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-3.0.0.tgz#9bedd5ca0897949bca47e7ff408062d549f587f2"
+  integrity sha1-m+3VygiXlJvKR+f/QIBi1Un1h/I=
 
 object-assign@^4.0.1, object-assign@^4.1.0, object-assign@^4.1.1:
   version "4.1.1"
@@ -15526,6 +15543,7 @@ react-inspector@^5.1.0:
     prop-types "^15.0.0"
 
 "react-is-16@npm:react-is@^16.13.1", react-is@^16.12.0, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1:
+  name react-is-16
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==

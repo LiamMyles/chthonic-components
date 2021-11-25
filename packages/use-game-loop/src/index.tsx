@@ -1,9 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react"
 
 interface UseGameLoop {
-  logicToLoop: () => void;
-  extraCleanUp?: () => void;
-  speed: number;
+  logicToLoop: () => void
+  extraCleanUp?: () => void
+  speed: number
 }
 
 export const useGameLoop = ({
@@ -11,13 +11,13 @@ export const useGameLoop = ({
   extraCleanUp,
   speed,
 }: UseGameLoop) => {
-  const [secondsPassed, setSecondsPassed] = useState(0);
-  const [playLoop, setPlayLoop] = useState(true);
-  const requestedAnimationId = useRef(0);
-  const startTime = useRef(0);
+  const [secondsPassed, setSecondsPassed] = useState(0)
+  const [playLoop, setPlayLoop] = useState(true)
+  const requestedAnimationId = useRef(0)
+  const startTime = useRef(0)
 
   useEffect(() => {
-    startTime.current = Date.now();
+    startTime.current = Date.now()
 
     const gameLoop = (
       currentTiming: number,
@@ -26,44 +26,44 @@ export const useGameLoop = ({
     ) => {
       const secondsPassed = Math.round(
         Math.abs(startTime.current - Date.now()) / 1000
-      );
-      setSecondsPassed(secondsPassed);
+      )
+      setSecondsPassed(secondsPassed)
 
-      let newLastRunTiming = lastRunTiming;
+      let newLastRunTiming = lastRunTiming
 
       if (currentTiming - lastRunTiming > speed) {
-        logicToLoop();
-        newLastRunTiming = currentTiming;
+        logicToLoop()
+        newLastRunTiming = currentTiming
       }
 
       if (playNextLoop) {
         requestedAnimationId.current = requestAnimationFrame(
           (newCurrentTiming) => {
-            gameLoop(newCurrentTiming, newLastRunTiming, playNextLoop);
+            gameLoop(newCurrentTiming, newLastRunTiming, playNextLoop)
           }
-        );
+        )
       }
-    };
+    }
 
     if (playLoop) {
       requestAnimationFrame((newCurrentTiming) => {
-        gameLoop(newCurrentTiming, newCurrentTiming, playLoop);
-      });
+        gameLoop(newCurrentTiming, newCurrentTiming, playLoop)
+      })
     }
 
     return () => {
-      cancelAnimationFrame(requestedAnimationId.current);
-    };
-  }, [logicToLoop, extraCleanUp, speed, playLoop]);
+      cancelAnimationFrame(requestedAnimationId.current)
+    }
+  }, [logicToLoop, extraCleanUp, speed, playLoop])
 
   const stopLoop = () => {
-    cancelAnimationFrame(requestedAnimationId.current);
-    setPlayLoop(false);
-  };
+    cancelAnimationFrame(requestedAnimationId.current)
+    setPlayLoop(false)
+  }
 
   const startLoop = () => {
-    setPlayLoop(true);
-  };
+    setPlayLoop(true)
+  }
 
-  return { secondsPassed, stopLoop, startLoop, isPlayingLoop: playLoop };
-};
+  return { secondsPassed, stopLoop, startLoop, isPlayingLoop: playLoop }
+}

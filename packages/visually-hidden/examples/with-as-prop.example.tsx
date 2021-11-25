@@ -1,11 +1,11 @@
-import * as React from "react";
-import VisuallyHidden from "@reach/visually-hidden";
+import * as React from "react"
+import VisuallyHidden from "@reach/visually-hidden"
 
-let name = "As a div (TS)";
+let name = "As a div (TS)"
 
 function Example() {
-  return <VisuallyHidden as="div">Hidden Message</VisuallyHidden>;
+  return <VisuallyHidden as="div">Hidden Message</VisuallyHidden>
 }
 
-Example.storyName = name;
-export { Example };
+Example.storyName = name
+export { Example }

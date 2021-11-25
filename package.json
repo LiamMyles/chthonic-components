@@ -1,12 +1,12 @@
 {
-  "name": "reach-ui",
-  "description": "The accessible foundation of your React apps and design systems",
+  "name": "chthonic-components",
+  "description": "A place for a chthonic  components and hooks",
   "private": true,
-  "author": "React Training <hello@reacttraining.com>",
+  "author": "Liam Myles <liamthemonkey92@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/reach/reach-ui.git"
+    "url": "git+https://github.com/LiamMyles/chthonic-components.git"
   },
   "scripts": {
     "start": "start-storybook -p 9001 -c .storybook --ci",
@@ -115,16 +115,6 @@
   "workspaces": [
     "packages/*"
   ],
-  "changelog": {
-    "labels": {
-      "Type: Breaking Change": "🔨 Breaking Changes",
-      "Type: Bug": "🐛 Bugfixes",
-      "Type: Documentation": "📝 Documentation",
-      "Type: Feature": "🚀 Features",
-      "Type: Enhancement": "✨ Enhancements",
-      "Type: Housekeeping": "🏡 Housekeeping"
-    }
-  },
   "eslintConfig": {
     "extends": [
       "react-app"
@@ -160,7 +150,11 @@
     "packages/*/**/dist"
   ],
   "prettier": {
-    "singleQuote": false
+    "endOfLine": "lf",
+    "semi": false,
+    "singleQuote": false,
+    "tabWidth": 2,
+    "trailingComma": "es5"
   },
   "preconstruct": {
     "packages": [
