@@ -13,8 +13,6 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 
-import type * as Polymorphic from "@reach/utils/polymorphic"
-
 /**
  * VisuallyHidden
  *
@@ -46,7 +44,7 @@ const VisuallyHidden = React.forwardRef<any, any>(function VisuallyHidden(
       {...props}
     />
   )
-}) as Polymorphic.ForwardRefComponent<"span", VisuallyHiddenProps>
+})
 
 /**
  * @see Docs https://reach.tech/visually-hidden#visuallyhidden-props

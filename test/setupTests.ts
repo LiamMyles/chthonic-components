@@ -1,8 +1,7 @@
-import "@testing-library/jest-dom/extend-expect";
-import "jest-axe/extend-expect";
-import { axe, toHaveNoViolations } from "jest-axe";
-import { act } from "react-dom/test-utils";
-import { AxeResults } from "./types";
+import "@testing-library/jest-dom/extend-expect"
+import "jest-axe/extend-expect"
+import { axe, toHaveNoViolations } from "jest-axe"
+import { act } from "react-dom/test-utils"
 
 expect.extend({
   /**
@@ -12,11 +11,11 @@ expect.extend({
    * @param received
    */
   async toHaveNoAxeViolations(received: Element) {
-    const check = toHaveNoViolations.toHaveNoViolations.bind(this);
-    let axeResults: AxeResults | null;
+    const check = toHaveNoViolations.toHaveNoViolations.bind(this)
+    let axeResults: any
     await act(async () => {
-      axeResults = await axe(received);
-    });
-    return check(axeResults!);
+      axeResults = await axe(received)
+    })
+    return check(axeResults!)
   },
-});
+})
