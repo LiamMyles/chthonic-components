@@ -3,5 +3,5 @@ export { Example as BasicTS } from "./basic.example.tsx"
 export { Example as WithAsPropTS } from "./with-as-prop.example.tsx"
 
 export default {
-  title: "VisuallyHidden",
+  title: "VisuallyHidden Reach UI Clone",
 }
