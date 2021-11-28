@@ -1,14 +1,14 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import { act } from "react-dom/test-utils";
+import * as React from "react"
+import PropTypes from "prop-types"
+import { act } from "react-dom/test-utils"
 import {
   render as tlRender,
   MatcherFunction,
   fireEvent,
-} from "@testing-library/react";
-import { fireEvent as fireDomEvent } from "@testing-library/dom";
-import userEvent from "@testing-library/user-event";
-import { RenderOptions, RenderResult } from "./types";
+} from "@testing-library/react"
+import { fireEvent as fireDomEvent } from "@testing-library/dom"
+import userEvent from "@testing-library/user-event"
+import { RenderOptions, RenderResult } from "./types"
 
 /**
  * This function is useful if you want to query a DOM element by its text
@@ -32,14 +32,14 @@ export function withMarkup(query: Query) {
   return (text: string): HTMLElement | null =>
     query((content, node) => {
       if (!node) {
-        return false;
+        return false
       }
-      const hasText = (node: Element) => node.textContent === text;
+      const hasText = (node: Element) => node.textContent === text
       const childrenDontHaveText = Array.from(node.children).every(
         (child) => !hasText(child as HTMLElement)
-      );
-      return hasText(node) && childrenDontHaveText;
-    });
+      )
+      return hasText(node) && childrenDontHaveText
+    })
 }
 
 /**
@@ -48,8 +48,8 @@ export function withMarkup(query: Query) {
  * @param key
  */
 export function keyType(element: HTMLElement | Document, key: string) {
-  fireEvent.keyDown(element, { key });
-  fireEvent.keyUp(element, { key });
+  fireEvent.keyDown(element, { key })
+  fireEvent.keyUp(element, { key })
 }
 
 export function render<
@@ -63,44 +63,44 @@ export function render<
     baseElement,
     strict = false,
     wrapper: InnerWrapper = React.Fragment,
-  } = options;
+  } = options
 
-  const Mode = strict ? React.StrictMode : React.Fragment;
+  const Mode = strict ? React.StrictMode : React.Fragment
 
-  const Wrapper: React.FC = ({ children }) => {
+  const Wrapper = ({ children }: { children: React.ReactElement }) => {
     return (
       <Mode>
         <InnerWrapper>{children}</InnerWrapper>
       </Mode>
-    );
-  };
-  Wrapper.propTypes = { children: PropTypes.node };
+    )
+  }
+  Wrapper.propTypes = { children: PropTypes.node }
 
   const result = tlRender(element, {
     baseElement,
     wrapper: Wrapper,
-  }) as unknown as RenderResult<P, T>;
+  }) as unknown as RenderResult<P, T>
 
   // These handy functions courtesy of https://github.com/mui-org/material-ui
   result.setProps = function setProps(props: P) {
-    result.rerender(React.cloneElement(element, props));
-    return result;
-  } as any;
+    result.rerender(React.cloneElement(element, props))
+    return result
+  } as any
 
   result.forceUpdate = function forceUpdate() {
     result.rerender(
       React.cloneElement(element, {
         "data-force-update": String(Math.random()),
       })
-    );
-    return result;
-  };
+    )
+    return result
+  }
 
-  return result;
+  return result
 }
 
 export async function wait(time: number) {
-  return await new Promise<void>((res) => setTimeout(res, time));
+  return await new Promise<void>((res) => setTimeout(res, time))
 }
 
 /**
@@ -112,22 +112,22 @@ export async function wait(time: number) {
  * @param element
  */
 export function simulateMouseClick(element: HTMLElement) {
-  fireEvent.pointerDown(element, { pointerType: "mouse" });
-  fireEvent.mouseDown(element);
-  fireEvent.pointerUp(element, { pointerType: "mouse" });
-  fireEvent.mouseUp(element);
-  fireEvent.click(element);
+  fireEvent.pointerDown(element, { pointerType: "mouse" })
+  fireEvent.mouseDown(element)
+  fireEvent.pointerUp(element, { pointerType: "mouse" })
+  fireEvent.mouseUp(element)
+  fireEvent.click(element)
 }
 
 export function simulateSpaceKeyClick(
   element: HTMLElement,
   opts?: { fireClick?: boolean }
 ) {
-  let { fireClick } = opts || {};
-  fireEvent.keyDown(element, { key: " " });
-  fireEvent.keyUp(element, { key: " " });
+  let { fireClick } = opts || {}
+  fireEvent.keyDown(element, { key: " " })
+  fireEvent.keyUp(element, { key: " " })
   if (fireClick) {
-    fireEvent.click(element);
+    fireEvent.click(element)
   }
 }
 
@@ -135,15 +135,15 @@ export function simulateEnterKeyClick(
   element: HTMLElement,
   opts?: { fireClick?: boolean }
 ) {
-  let { fireClick } = opts || {};
-  fireEvent.keyDown(element, { key: "Enter" });
-  fireEvent.keyUp(element, { key: "Enter" });
+  let { fireClick } = opts || {}
+  fireEvent.keyDown(element, { key: "Enter" })
+  fireEvent.keyUp(element, { key: "Enter" })
   if (fireClick) {
-    fireEvent.click(element);
+    fireEvent.click(element)
   }
 }
 
-type Query = (f: MatcherFunction) => HTMLElement | null;
+type Query = (f: MatcherFunction) => HTMLElement | null
 
-export * from "@testing-library/react";
-export { act, userEvent, fireDomEvent, RenderOptions, RenderResult };
+export * from "@testing-library/react"
+export { act, userEvent, fireDomEvent, RenderOptions, RenderResult }
